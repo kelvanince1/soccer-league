@@ -1,0 +1,11 @@
+I commented most of the code in the index file, so I won't do too much explaining here.
+
+To run the file, simply open the directory in the command line and run "node index.js".
+
+
+I would just like to quickly mention that I used a local npm install of Jest for my tests.
+I run them with the 'npm run test' command.
+
+So when you first open the project, you may need to run an npm install to have access to jest.
+I will not include node modules in the zip I send you.
+If you have Jest installed globally, you may not need to npm install.
