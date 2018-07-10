@@ -95,7 +95,7 @@ function Checker() {
 
   // Map the list of teams now sorted by points total and alphabetically in the event of a tied points total,
   // and concatenate the results to allow the data to be made available to the console.
-  let finalStandings = sortedResults.map((iterator) => iterator + ', ' + this.teamScoresObj[iterator] + ((this.teamScoresObj[iterator] > ONE || teamScoresObj[iterator] === ZERO) ? multiplePoints : singlePoint));
+  let finalStandings = sortedResults.map((team) => team.trim() + ', ' + this.teamScoresObj[team] + ((this.teamScoresObj[team] > ONE || teamScoresObj[team] === ZERO) ? multiplePoints : singlePoint));
 
   for (let i = ZERO; i < sortedResults.length; i++) {
     let counter = i;

@@ -10,8 +10,8 @@ test('Expect Tarantulas to equal 6', () => {
   expect(teamScoresObj.Tarantulas).toEqual(6);
 });
 
-test('Expect Snakes to equal 1', () => {
-  expect(teamScoresObj.Snakes).toEqual(1);
+test('Expect Lions to equal 5', () => {
+  expect(teamScoresObj.Lions).toEqual(5);
 });
 
 test('Expect logic to return equal values when teams draw', () => {
