@@ -1,55 +1,24 @@
-## The Problem
+Soccer league rankings on the command line.
 
-We want you to create a command-line application that will calculate the
-ranking table for a soccer league.
+Written in JavaScript, the code logs the ranking and points total for soccer teams to the console after their results have been tallied.
 
-### Input/output
+-- To run the file simply clone the project, open the directory in the command line and run "npm install".
+Jest is the only dependency I have installed, however, so if you have Jest installed globally on your machine
+you may not need to install the dependencies within this project.
 
-The input and output will be text. Your solution should parse the provided
-sample-input.txt file via stdin (pipe or redirect) or by parsing a file passed
-by name on the command line. Your solution should output the correct result via
-stdout to the console.
+-- If you do install the dependencies, you can run the test file included in this application with the command
+"npm run test".
+If you have jest installed globally, then you might be able to achieve the same results by ignoring npm install
+and running the same command.
 
-The input contains results of games, one per line. See sample-input.txt for
-details. The output should be ordered from most to least points, following the
-format specified in expected-output.txt.
+-- The command will run the test.js file, testing a variety of the code.
 
-You can expect that the input will be well-formed. There is no need to add
-special handling for malformed input files.
+-- The projects code is otherwise written in the index.js file, so running "node index.js" in the command line
+will run the file and log the expected output to the console.
 
-### The rules
 
-In this league, a draw (tie) is worth 1 point and a win is worth 3 points. A
-loss is worth 0 points. If two or more teams have the same number of points,
-they should have the same rank and be printed in alphabetical order (as in the
-tie for 3rd place in the sample data).
+SOLUTION SELF FEEDBACK
+-- I am not as satisfied with this solution as I could be. I believe I could have abstracted certain code snippets much better, avoiding some of the longer/nastier if/else statements.
+Nonetheless, it is a pretty decent use of recursion. As more data is added, it would only require minimal additions to handle the extra load.
 
-### Guidelines
-
-This should be implemented in a language with which you are familiar. We would
-prefer that you use elixir, ruby, javascript, python, objective-c or java , if
-you are comfortable doing so. If none of these are comfortable, please choose a
-language that is both comfortable for you and suited to the task.
-
-Your solution should be able to be run (and if applicable, built) from the
-command line. Please include appropriate scripts and instructions for
-running your application and your tests.
-
-If you use other libraries installed by a common package manager
-(rubygems/bundler, npm, pip, gradle), it is not necessary to commit the
-installed packages.
-
-We write automated tests and we would like you to do so as well.
-
-We appreciate well factored, object-oriented or functional designs.
-
-Please document any steps necessary to run your solution and your tests.
-
-### Platform support
-
-This will be run in a unix-ish environment (OS X). If you choose to use a
-compiled language, please keep this in mind. (Dependency on Xcode is acceptable
-for objective-c solutions) Please use platform-agnostic constructs where
-possible (line-endings and file-path-separators are two problematic areas).
-
-# soccer-league
+-- My solution does a lot manipulating and mutating of the data that was fed back from the file reader. I'm not particularly pleased with that. If this project needed to use dynamic user data which was constantly being updated, then I would have spent more time writing abstracted objects to handle that data and passing down copies, mutating from there.
